@@ -1,0 +1,42 @@
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.stage.Screen?>
+<?import javafx.scene.layout.Pane?>
+<?import java.net.URL?>
+<?import javafx.stage.Stage?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<BorderPane fx:id="BPane" fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen"/>
+    </fx:define>
+    <stylesheets>
+        <URL value="@styles.css"/>
+    </stylesheets>
+    <top>
+        <ImageView fitWidth="${BPane.width}" preserveRatio="true">
+            <image>
+                <Image url="@DvWlogo.jpg"/>
+            </image>
+        </ImageView>
+    </top>
+    <center>
+        <Label fx:id="dialog" text="test" prefWidth="${BPane.width}" alignment="CENTER"/>
+    </center>
+    <bottom>
+        <FlowPane fx:id="FPane">
+            <Button fx:id="btn1" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
+            <Button fx:id="btn2" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
+            <Button fx:id="btn3" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
+            <Button fx:id="btn4" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
+            <Button fx:id="ExtBtn" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
+            <TextField fx:id="name" prefWidth="${BPane.width}"/>
+        </FlowPane>
+    </bottom>
+</BorderPane>
