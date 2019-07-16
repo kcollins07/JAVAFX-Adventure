@@ -1,0 +1,7 @@
+.pane_css {
+    -fx-background-image: url("DvWlogo.jpg");
+    -fx-background-size: 200 200;
+    -fx-background-color: transparent;
+    -fx-background-repeat: stretch;
+    /*-fx-background-position: center;*/
+}
