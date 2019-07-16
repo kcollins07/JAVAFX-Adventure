@@ -5,8 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+
+import java.util.List;
 
 public class Main extends Application {
 
@@ -18,6 +21,7 @@ public class Main extends Application {
         Rectangle2D bounds = screen.getVisualBounds();
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
         primaryStage.show();
     }
 

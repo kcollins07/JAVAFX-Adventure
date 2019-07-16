@@ -11,6 +11,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
 <BorderPane fx:id="BPane" fx:controller="sample.Controller"
             xmlns:fx="http://javafx.com/fxml">
     <fx:define>
@@ -20,23 +21,28 @@
         <URL value="@styles.css"/>
     </stylesheets>
     <top>
-        <ImageView fitWidth="${BPane.width}" preserveRatio="true">
-            <image>
-                <Image url="@DvWlogo.jpg"/>
-            </image>
-        </ImageView>
+    <FlowPane fx:id="flow">
+    <Label fx:id="dialog" prefWidth="${BPane.width}" alignment="CENTER" style="-fx-padding: 0 0 20 0;" contentDisplay="TOP" graphicTextGap="-40.0" textFill="black">
+        <graphic>
+            <Pane fx:id="pane">
+            <ImageView fx:id="BG" fitWidth="${BPane.width}" preserveRatio="true">
+                <image>
+                    <Image url="@img/DvWlogo.jpg"/>
+                </image>
+            </ImageView>
+            </Pane>
+        </graphic>
+    </Label>
+    </FlowPane>
     </top>
-    <center>
-        <Label fx:id="dialog" text="test" prefWidth="${BPane.width}" alignment="CENTER"/>
-    </center>
     <bottom>
-        <FlowPane fx:id="FPane">
-            <Button fx:id="btn1" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
-            <Button fx:id="btn2" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
-            <Button fx:id="btn3" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
-            <Button fx:id="btn4" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
-            <Button fx:id="ExtBtn" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
-            <TextField fx:id="name" prefWidth="${BPane.width}"/>
-        </FlowPane>
+    <FlowPane fx:id="FPane">
+        <Button fx:id="btn1" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
+        <Button fx:id="btn2" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
+        <Button fx:id="btn3" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
+        <Button fx:id="btn4" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
+        <Button fx:id="ExtBtn" prefWidth="${BPane.width}" onAction="#HandleBtn"/>
+        <TextField fx:id="name" prefWidth="${BPane.width}"/>
+    </FlowPane>
     </bottom>
 </BorderPane>
